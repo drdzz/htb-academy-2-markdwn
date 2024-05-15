@@ -1,15 +1,15 @@
-import requests
+import requests, re, os, time
 from bs4 import BeautifulSoup as bs4
 from markdownify import markdownify as md
-import re
-import os
+import change_guines
 from tqdm import tqdm
 
 # vars
 url = "https://academy.hackthebox.com/modules/unlocked"
+directory = '/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box'
 headers = {
             "Host": "academy.hackthebox.com",
-            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _gid=GA1.2.1199292335.1715171948; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=8INSe9xEIXegQuWMnV6Yi0zeHw09LGqTnH5AP.H988k-1715245749-1.0.1.1-AhCeprsF544wlkXWc5gqqawAMASH0A.oUwB5sJWG8eFREZZwDkCLYHyifKjFpymr7TgF_OKmS_ub9czHNXHQ9Q; _ga=GA1.2.1428039496.1715171948; _gat_UA-93577176-12=1; _gat=1; _ga_BFR4KR7D60=GS1.2.1715245750.3.0.1715245750.60.0.0; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715182172129.1715245750743.3; __hssrc=1; __hssc=186608822.1.1715245750743; _ga_TKKV7WGJ6V=GS1.1.1715245749.4.0.1715245755.0.0.0; XSRF-TOKEN=eyJpdiI6IjJOdTBDc3Y4NTFKbUJTTXlRYmZyTlE9PSIsInZhbHVlIjoicE1mbkFJM0lVN2U4M1VmWGh1RFR2L3hSYUhmZ0tidjQ3N25qZmVYekNLd3BJZkFjNUU4VW5MUTlNM09ZQnB6YVdBNzJvWGkybnJ6UVdFMG03SWRaYm96dmhsUWdReDRLRjdRdkJ2SUsyQkhMcVpLMXhzRUxuUDk2YlFMZi8zVUUiLCJtYWMiOiI4ZDA3MGU3ZTI1MTUxNjA1NDc4YWE5OGY3ZTA4MDNkMjVmNGQxYjljNWYzM2IxOWYyYzFmNmFjMTI1ZGRiY2I3IiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6IkZNeUNnMDBZY3Izdjl6bW02bWlwQVE9PSIsInZhbHVlIjoibkRqMURoUnloMGFIa1ppcytGWW5lSEcxRy81dm1FMDIwa25jTkovbThVQ3NXR1VGZ3g0QUpWcDVuSDZ2M25TeGxHSStYYmxrOXdvSFpweG9qb0xNb0JVc3FweWpyellrWjRYakQxOHlPbVNuRllaSngyR0JCY1JJN0d6NjFBVjIiLCJtYWMiOiJjN2QyNWQ4YmI4YjBiMWQ2NjM4Y2U1ZGRmNGNlNjZkMGIwODY3ZTQ1MDI4M2E4MmM0MjEzYjczZjk1ZDU5N2YzIiwidGFnIjoiIn0%3D; intercom-session-awwxrc0h=RDNzSTlGUmRhZzFLK0dUOW5uaFpwblNBTkIxVTQyVC9XeDJHTEUveWNkL2VRcjZORjdicXlleloyMWVucWlMSy0tMWl4WE9PcjQyUkRWV05BVXFPeXpqUT09--ee2c8f2606e4586cfefd53e1aff6de3b3f832ca6",
+            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=aEtGBHWRbWTt4frx9ljVz_Pz8WVSiBKzue3VQxCIhUE-1715781136-1.0.1.1-Pl_g9AsTNB0W1d.bjooaV8LKs7pDwciQ908rOFJZ45aUSmkh_z60uL8AvqgRnj5MmhLfzc5eU8RbgTMolUQvfA; _gid=GA1.2.1693809428.1715781138; _gat_UA-93577176-12=1; _gat=1; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715245750743.1715781139013.4; __hssrc=1; XSRF-TOKEN=eyJpdiI6InFxd2t3QTYzRU9UbjZyZFBYa21yb2c9PSIsInZhbHVlIjoiMVRqdFhMNk0vRjUrbndIM1hpUTNGMXlJZHMyZEx6Y1JXL3QwbGhsSlM2QUJVUVJ1T0c4TXNvUmgxNlh3ZUNjZk43V1RsQjB4UVR3aFFyc2Z3OGkvRk1wQ0c0bDA0MHcwSmxHUWliMFNIcXhvTTJLWUFtWTFrbnVuZk5TU0xtVTYiLCJtYWMiOiIwOTI3Y2MyM2ZmZDY4MDJlZmE3ZDU1OWRlYjg4OGQwNjkxYTg4ZTAxMmM2NDYxYmQzYjBiMjQ4Y2UwNTVkNDdmIiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6ImZDY3dmREJkSkpXZng2NEZ2cXpxZ2c9PSIsInZhbHVlIjoiTkw1Y3o1TXJhaGk5OC93YmZRQi9tVmc3cnlSSXIwYlAyYmpweGM0UUZxYWlRaHJwRklVZHl1SHRZTXFVTmN2MGJZQUh0OW0rc2wrNm5NUklmZ0w5djVnODg5ZTE4N3p4dUQxRis1WlBOcGNKOXZLZDlyaTdvY1BDUHU3ZnhmMlMiLCJtYWMiOiI5Y2Y1MjM2ZGY1MTU1NzhmMDk3OWIyMWQzNWJhYWIxYjFhYTg5YzU2M2YwM2FmOWJiZjg3YmM3Yzk2YjU0ODdhIiwidGFnIjoiIn0%3D; __gtm_referrer=https%3A%2F%2Faccount.hackthebox.com%2F; _ga_TKKV7WGJ6V=GS1.1.1715781138.6.1.1715781166.0.0.0; _ga=GA1.2.1428039496.1715171948; _ga_BFR4KR7D60=GS1.2.1715781138.4.1.1715781166.32.0.0; __hssc=186608822.4.1715781139013; intercom-session-awwxrc0h=U3F4OGIyaVl4TnlxSjVWdU50RGJaV0RPbVdvV0lOTEtiZ28yZThQdzJLS1Y5YnVqd0ttUUp4bjZTRU5MZzFhNC0teXhvei9PK0tqNGpwWm9NbjNMUDhLZz09--862cdf3bb27812c0957ecf27f03254f2b7115c4b",
             "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
             "Sec-Ch-Ua-Mobile": "?0",
             "Sec-Ch-Ua-Platform": "\"macOS\"",
@@ -42,13 +42,13 @@ def get_moduleNames(s):
     soup = bs4(r.text, "html.parser")
     modules = soup.find_all("div", class_="card")
     module_names = {}
-    for module in modules[0:7]:
+    for module in modules[:]:
         module_name = module.find("img", alt=True)["alt"]
         module_names[module_name] = []
     return modules, module_names
 def get_moduleLinks(modules, headers):
     hrefs = []
-    for module in modules[:7]:
+    for module in modules[:]:
         link = module.find("a")
         if link:
             hrefs.append(link.get("href"))
@@ -59,7 +59,8 @@ def get_moduleLinks(modules, headers):
         stripped_link = link.split("/details")[0] + link.split("/details")[1]
         response = requests.get(stripped_link, headers=headers)
         r = bs4(response.text, "html.parser")
-        redirect = r.find_all("a")
+        table_contents = r.find("div", {'class': 'card', 'id': 'TOC'})
+        redirect = table_contents.find_all("a")
         for r in redirect:
             a = r.get("href")
             if "/section/" in a:
@@ -74,14 +75,7 @@ def get_moduleLinks(modules, headers):
         if module_number not in module_links:
             module_links[module_number] = []
         module_links[module_number].append(link)
-
-    sorted_dict = {}
-
-    for key, value in module_links.items():
-        # Remove duplicates and sort based on the last number after a "/"
-        sorted_values = sorted(set(value), key=lambda x: int(re.search(r'/(\d+)$', x).group(1)))
-        sorted_dict[key] = sorted_values
-    return sorted_dict
+    return module_links
 def get_content(module_links):
     content = {}
     os.system("clear")
@@ -151,3 +145,4 @@ module_links = get_moduleLinks(modules, headers)
 module_names = get_content(module_links)
 markdowned = to_markdown(module_names)
 write_to_files(markdowned)
+change_guines.process_directory(directory)

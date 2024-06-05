@@ -9,7 +9,7 @@ url = "https://academy.hackthebox.com/modules/unlocked"
 directory = '/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box'
 headers = {
             "Host": "academy.hackthebox.com",
-            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=Duil5lw_9jhS5m6M9PejqUDYIEA9L3_Wv1aNuSFJwK0-1717430417-1.0.1.1-pR1NlNtjhHNM_vTj5uIqJ_TOaYqGS3dZ5xjyMFG9UNmuAqkDXZIRIJu0pF4f6p4rfnwMdxw58YTSvLaM7DecVw; _gid=GA1.2.82511626.1717430421; _gat_UA-93577176-12=1; _gat=1; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715781139013.1717430421510.5; __hssrc=1; XSRF-TOKEN=eyJpdiI6Im5SK0VDTTJEZHVhM3VpMVZ4amhFUEE9PSIsInZhbHVlIjoiN1ZnTGdLVlRQOFM2U1Z3eXZMaTAxcUZ4cEdYQjlYdnJXN1V0cytnTVh2NjdMYnl0YWt2aGhEZWRtYUpyTkcrd05LUzZjNW44Qk9OcUg2YWduM0RMeXVLZjZoUDdQbXBraEZJa0ZKdEdUcWVlaTQ1d2lvY3VrNEE1OFBZanhVeUsiLCJtYWMiOiI1ZGNkODU0NWUzNTdmNTZjNjg4OWEyMDEwMWZlNGZkNWVhODgwZjAzNTU3ZjZlMTU5YTU0YjM5ZmM4YTM5MzJkIiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6IkJ0MDZhZjAwcldMTkUwWWZkZTJHRGc9PSIsInZhbHVlIjoiRERRQ1h2ci83TmJMeTRoOStHV05oNmNNMyt3TzZWVnhkK1lKOEpIWUZyVWJzOFlrVC9XQkhmeS9TdWFEdEh2ZE1vdDkvNERrb29zOFFoWlM4b1FKNHRMdzdPUzRHQjcyemRjT2ZuRW9tQ1dJUGU2OXNkTHQ3aXlMRnVuUzcwdnciLCJtYWMiOiI3NjdhMGJhOGE3MjEzNTQ3NDc2YjQ5NmZiODMxMzI1MzFjZGE0ODczNDIxMGU4YWNkNzdkM2YzZTQ4ZWQ3NWNlIiwidGFnIjoiIn0%3D; __gtm_referrer=https%3A%2F%2Faccount.hackthebox.com%2F; _ga_TKKV7WGJ6V=GS1.1.1717430420.8.1.1717430438.0.0.0; _ga=GA1.2.1428039496.1715171948; _ga_BFR4KR7D60=GS1.2.1717430421.5.1.1717430440.41.0.0; __hssc=186608822.2.1717430421510"
+            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=Duil5lw_9jhS5m6M9PejqUDYIEA9L3_Wv1aNuSFJwK0-1717430417-1.0.1.1-pR1NlNtjhHNM_vTj5uIqJ_TOaYqGS3dZ5xjyMFG9UNmuAqkDXZIRIJu0pF4f6p4rfnwMdxw58YTSvLaM7DecVw; _gid=GA1.2.82511626.1717430421; _gat_UA-93577176-12=1; _gat=1; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715781139013.1717430421510.5; __hssrc=1; XSRF-TOKEN=eyJpdiI6Im5SK0VDTTJEZHVhM3VpMVZ4amhFUEE9PSIsInZhbHVlIjoiN1ZnTGdLVlRQOFM2U1Z3eXZMaTAxcUZ4cEdYQjlYdnJXN1V0cytnTVh2NjdMYnl0YWt2aGhEZWRtYUpyTkcrd05LUzZjNW44Qk9OcUg2YWduM0RMeXVLZjZoUDdQbXBraEZJa0ZKdEdUcWVlaTQ1d2lvY3VrNEE1OFBZanhVeUsiLCJtYWMiOiI1ZGNkODU0NWUzNTdmNTZjNjg4OWEyMDEwMWZlNGZkNWVhODgwZjAzNTU3ZjZlMTU5YTU0YjM5ZmM4YTM5MzJkIiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6ImRoQ3F4aFB2UFp6V1RYMEJMT0JDSVE9PSIsInZhbHVlIjoiUmFkOUhtVWg3Z3YvVUxvbVg2RHJKbWVOQmVmMUlZZmpzdzJoK2pPejh3N3JDNlp2VnBsdmNHcldKclAxbUpnTEVqZkxUdGxMbm1EUUJIQUQzQWg4OG9MeVFBVUFMeWNTYUlyOEkwTGhKd1kxWUtxbVQvUXFrb1hxMyt6VHNDOS8iLCJtYWMiOiIyZTVkMTEyNWYwZjI1NmM5YWM2MjdlNmU2OGZhNGEyNjBhODgyYmM0ZDA4Y2YxNWU4NjhiOGJjM2EwMzg1MDEyIiwidGFnIjoiIn0%3D; __gtm_referrer=https%3A%2F%2Faccount.hackthebox.com%2F; _ga_TKKV7WGJ6V=GS1.1.1717430420.8.1.1717430438.0.0.0; _ga=GA1.2.1428039496.1715171948; _ga_BFR4KR7D60=GS1.2.1717430421.5.1.1717430440.41.0.0; __hssc=186608822.2.1717430421510"
             }
 
 # methods
@@ -34,7 +34,7 @@ def get_moduleNames(s):
     return modules, module_names
 def get_moduleLinks(modules, headers):
     hrefs = []
-    for module in modules[:]:
+    for module in modules[:1]:
         link = module.find("a")
         if link:
             hrefs.append(link.get("href"))
@@ -51,9 +51,6 @@ def get_moduleLinks(modules, headers):
             a = r.get("href")
             if "/section/" in a:
                 redirect_info.append(a)
-        #os.system("clear")
-    #better presentation as a list of lists
-    #redirects = sorted(set(redirect_info))
     module_links = {}
     for link in redirect_info:
         module_number = link.split("/")[-3]

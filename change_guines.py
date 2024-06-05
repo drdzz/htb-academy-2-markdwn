@@ -41,5 +41,6 @@ def process_directory(directory):
                 process_file(file_path)
 
 # Example usage:
-directory = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/"
+"""directory = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/"
 process_directory(directory)
+"""

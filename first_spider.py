@@ -9,22 +9,8 @@ url = "https://academy.hackthebox.com/modules/unlocked"
 directory = '/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box'
 headers = {
             "Host": "academy.hackthebox.com",
-            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=aEtGBHWRbWTt4frx9ljVz_Pz8WVSiBKzue3VQxCIhUE-1715781136-1.0.1.1-Pl_g9AsTNB0W1d.bjooaV8LKs7pDwciQ908rOFJZ45aUSmkh_z60uL8AvqgRnj5MmhLfzc5eU8RbgTMolUQvfA; _gid=GA1.2.1693809428.1715781138; _gat_UA-93577176-12=1; _gat=1; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715245750743.1715781139013.4; __hssrc=1; XSRF-TOKEN=eyJpdiI6InFxd2t3QTYzRU9UbjZyZFBYa21yb2c9PSIsInZhbHVlIjoiMVRqdFhMNk0vRjUrbndIM1hpUTNGMXlJZHMyZEx6Y1JXL3QwbGhsSlM2QUJVUVJ1T0c4TXNvUmgxNlh3ZUNjZk43V1RsQjB4UVR3aFFyc2Z3OGkvRk1wQ0c0bDA0MHcwSmxHUWliMFNIcXhvTTJLWUFtWTFrbnVuZk5TU0xtVTYiLCJtYWMiOiIwOTI3Y2MyM2ZmZDY4MDJlZmE3ZDU1OWRlYjg4OGQwNjkxYTg4ZTAxMmM2NDYxYmQzYjBiMjQ4Y2UwNTVkNDdmIiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6ImZDY3dmREJkSkpXZng2NEZ2cXpxZ2c9PSIsInZhbHVlIjoiTkw1Y3o1TXJhaGk5OC93YmZRQi9tVmc3cnlSSXIwYlAyYmpweGM0UUZxYWlRaHJwRklVZHl1SHRZTXFVTmN2MGJZQUh0OW0rc2wrNm5NUklmZ0w5djVnODg5ZTE4N3p4dUQxRis1WlBOcGNKOXZLZDlyaTdvY1BDUHU3ZnhmMlMiLCJtYWMiOiI5Y2Y1MjM2ZGY1MTU1NzhmMDk3OWIyMWQzNWJhYWIxYjFhYTg5YzU2M2YwM2FmOWJiZjg3YmM3Yzk2YjU0ODdhIiwidGFnIjoiIn0%3D; __gtm_referrer=https%3A%2F%2Faccount.hackthebox.com%2F; _ga_TKKV7WGJ6V=GS1.1.1715781138.6.1.1715781166.0.0.0; _ga=GA1.2.1428039496.1715171948; _ga_BFR4KR7D60=GS1.2.1715781138.4.1.1715781166.32.0.0; __hssc=186608822.4.1715781139013; intercom-session-awwxrc0h=U3F4OGIyaVl4TnlxSjVWdU50RGJaV0RPbVdvV0lOTEtiZ28yZThQdzJLS1Y5YnVqd0ttUUp4bjZTRU5MZzFhNC0teXhvei9PK0tqNGpwWm9NbjNMUDhLZz09--862cdf3bb27812c0957ecf27f03254f2b7115c4b",
-            "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
-            "Sec-Ch-Ua-Mobile": "?0",
-            "Sec-Ch-Ua-Platform": "\"macOS\"",
-            "Upgrade-Insecure-Requests": "1",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.118 Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "Sec-Fetch-Site": "same-origin",
-            "Sec-Fetch-Mode": "navigate",
-            "Sec-Fetch-User": "?1",
-            "Sec-Fetch-Dest": "document",
-            "Referer": "https://academy.hackthebox.com/module/details/41",
-            "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
-            "Priority": "u=0, i"
-        }
+            "Cookie": "_gcl_au=1.1.580230637.1715171948; ajs_anonymous_id=486b6ba2-c4fc-4034-85ba-33711676067a; _fbp=fb.1.1715171948152.1793348649; ps_mode=trackingV1; hubspotutk=83fc464dca33ad6af7079c03e9e6237a; intercom-id-awwxrc0h=e2cec2ba-529a-42c4-b93f-42197b18855e; intercom-device-id-awwxrc0h=ef37ce1a-4215-4a05-857e-61ae180dbae4; ajs_user_id=e2738a126c8a97b2dc5670d9428ba43c; tracking-preferences={%22version%22:1%2C%22destinations%22:{%22Actions%20Google%20Analytic%204%22:true%2C%22Google%20Analytics%22:true%2C%22Intercom%22:true%2C%22LinkedIn%20Insight%20Tag%22:false%2C%22Twitter%20Ads%22:false}%2C%22custom%22:{%22functional%22:true%2C%22marketingAndAnalytics%22:true%2C%22advertising%22:false}}; __cf_bm=Duil5lw_9jhS5m6M9PejqUDYIEA9L3_Wv1aNuSFJwK0-1717430417-1.0.1.1-pR1NlNtjhHNM_vTj5uIqJ_TOaYqGS3dZ5xjyMFG9UNmuAqkDXZIRIJu0pF4f6p4rfnwMdxw58YTSvLaM7DecVw; _gid=GA1.2.82511626.1717430421; _gat_UA-93577176-12=1; _gat=1; __hstc=186608822.83fc464dca33ad6af7079c03e9e6237a.1715171949032.1715781139013.1717430421510.5; __hssrc=1; XSRF-TOKEN=eyJpdiI6Im5SK0VDTTJEZHVhM3VpMVZ4amhFUEE9PSIsInZhbHVlIjoiN1ZnTGdLVlRQOFM2U1Z3eXZMaTAxcUZ4cEdYQjlYdnJXN1V0cytnTVh2NjdMYnl0YWt2aGhEZWRtYUpyTkcrd05LUzZjNW44Qk9OcUg2YWduM0RMeXVLZjZoUDdQbXBraEZJa0ZKdEdUcWVlaTQ1d2lvY3VrNEE1OFBZanhVeUsiLCJtYWMiOiI1ZGNkODU0NWUzNTdmNTZjNjg4OWEyMDEwMWZlNGZkNWVhODgwZjAzNTU3ZjZlMTU5YTU0YjM5ZmM4YTM5MzJkIiwidGFnIjoiIn0%3D; htb_academy_session=eyJpdiI6IkJ0MDZhZjAwcldMTkUwWWZkZTJHRGc9PSIsInZhbHVlIjoiRERRQ1h2ci83TmJMeTRoOStHV05oNmNNMyt3TzZWVnhkK1lKOEpIWUZyVWJzOFlrVC9XQkhmeS9TdWFEdEh2ZE1vdDkvNERrb29zOFFoWlM4b1FKNHRMdzdPUzRHQjcyemRjT2ZuRW9tQ1dJUGU2OXNkTHQ3aXlMRnVuUzcwdnciLCJtYWMiOiI3NjdhMGJhOGE3MjEzNTQ3NDc2YjQ5NmZiODMxMzI1MzFjZGE0ODczNDIxMGU4YWNkNzdkM2YzZTQ4ZWQ3NWNlIiwidGFnIjoiIn0%3D; __gtm_referrer=https%3A%2F%2Faccount.hackthebox.com%2F; _ga_TKKV7WGJ6V=GS1.1.1717430420.8.1.1717430438.0.0.0; _ga=GA1.2.1428039496.1715171948; _ga_BFR4KR7D60=GS1.2.1717430421.5.1.1717430440.41.0.0; __hssc=186608822.2.1717430421510"
+            }
 
 # methods
 def get_session(cookie):
@@ -116,8 +102,12 @@ def write_to_files(module_names):
         # Iterate over module names
         for key, value_list in module_names.items():
             # Create a folder with the name of the key
-            #key = key.replace("/", "\/")
             folder_path = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/" + key + "/"
+            if os.path.exists(folder_path):
+                # Skip if the folder already exists
+                outer_bar.update(1)
+                continue
+            
             os.makedirs(folder_path, exist_ok=True)
             # Initialize the inner tqdm progress bar for loading files to the module folder
             i = 0
@@ -126,17 +116,19 @@ def write_to_files(module_names):
                 lines = value.split('\n')
                 start_index = next((i for i, line in enumerate(lines[1:], start=1) if re.search(r'\w', line)), None)
                 if start_index is not None:
-                    file = lines[start_index].strip()
-                    file = file.replace("/","-")
-                        # Use the first line containing a word as the filename
-                    filename = os.path.join(folder_path + str(i) + ". " + file + ".md")
-                        # Increment index for the next file
+                    file = lines[start_index].strip().replace("/", "-")
+                    # Use the first line containing a word as the filename
+                    filename = os.path.join(folder_path, f"{i}. {file}.md")
+                    # Increment index for the next file
                     i += 1
                     lines.insert(3, "#hacktheboxacademy #theory")
+                    # Check if the file already exists
+                    if not os.path.exists(filename):
                         # Write the value starting from the line with a word to a Markdown file inside the folder
-                    with open(filename, 'w') as f:
-                        f.write('\n'.join(lines[3:]))
-            outer_bar.update()  # Update the outer progress bar
+                        with open(filename, 'w') as f:
+                            f.write('\n'.join(lines[3:]))
+            # Update the outer progress bar
+            outer_bar.update(1)
 
 # execution flow
 s = get_session(headers["Cookie"])

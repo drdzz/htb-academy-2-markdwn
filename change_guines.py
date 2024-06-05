@@ -10,18 +10,19 @@ def process_file(file_path):
 
         for line in lines:
             stripped_line = line.strip()
+
+            # Leave lines like '#hashtag' intact
+            if re.match(r'^#[A-Za-z0-9]', stripped_line):
+                modified_lines.append(line)
+                continue
             
-            if stripped_line.startswith('#'):
-                # Check if there are multiple sets of hashes separated by spaces
-                if re.match(r'^#+(\s#+)+', stripped_line):
-                    # Split the line into parts, keep the first set of hashes, and clean the rest
-                    first_hash_set = re.match(r'^#+', stripped_line).group(0)
-                    rest_of_line = re.sub(r'#', '', stripped_line[len(first_hash_set):]).strip()
-                    cleaned_line = first_hash_set + ' ' + rest_of_line
-                    modified_lines.append(cleaned_line + '\n')
-                else:
-                    # Leave lines like '#hello' as is
-                    modified_lines.append(line)
+            # Match lines that start with multiple sets of hashes
+            if re.match(r'^#+(\s#+)+', stripped_line):
+                # Split the line into parts, keep the first set of hashes, and clean the rest
+                first_hash_set = re.match(r'^#+', stripped_line).group(0)
+                rest_of_line = re.sub(r'#', '', stripped_line[len(first_hash_set):]).strip()
+                cleaned_line = first_hash_set + ' ' + rest_of_line
+                modified_lines.append(cleaned_line + '\n')
             else:
                 modified_lines.append(line)
 
@@ -40,5 +41,5 @@ def process_directory(directory):
                 process_file(file_path)
 
 # Example usage:
-directory = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/SQLMap Essentials/"
+directory = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/"
 process_directory(directory)

@@ -35,16 +35,18 @@ def get_moduleLinks(modules, headers):
     # Get redirects links (and content pages, it has logic behind. SO its weird)
     redirect_info = []
     for link in tqdm(hrefs, desc=f"Getting links for each module:"):
-        module = link.split("/")[-1]
-        stripped_link = link.split("/details")[0] + link.split("/details")[1]
-        response = requests.get(stripped_link, headers=headers)
-        r = bs4(response.text, "html.parser")
-        table_contents = r.find("div", {'class': 'card', 'id': 'TOC'})
-        redirect = table_contents.find_all("a")
-        for r in redirect:
-            a = r.get("href")
-            if "/section/" in a:
-                redirect_info.append(a)
+        if link == "https://academy.hackthebox.com/module/details/67":
+            module = link.split("/")[-1]
+            stripped_link = link.split("/details")[0] + link.split("/details")[1]
+            response = requests.get(stripped_link, headers=headers)
+            r = bs4(response.text, "html.parser")
+            table_contents = r.find("div", {'class': 'card', 'id': 'TOC'})
+            redirect = table_contents.find_all("a")
+            for r in redirect:
+                a = r.get("href")
+                if "/section/" in a:
+                    redirect_info.append(a)
+            else:continue
     module_links = {}
     for link in redirect_info:
         module_number = link.split("/")[-3]

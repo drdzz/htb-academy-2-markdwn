@@ -11,13 +11,15 @@ def process_file(file_path):
         for line in lines:
             stripped_line = line.strip()
 
-            # Leave lines like '#hashtag' intact
+            # Leave lines like '#hashtag' intac
             if re.match(r'^#[A-Za-z0-9]', stripped_line):
+                print("1",line)
                 modified_lines.append(line)
                 continue
             
             # Match lines that start with multiple sets of hashes
             if re.match(r'^#+(\s#+)+', stripped_line):
+                print("2",line)
                 # Split the line into parts, keep the first set of hashes, and clean the rest
                 first_hash_set = re.match(r'^#+', stripped_line).group(0)
                 rest_of_line = re.sub(r'#', '', stripped_line[len(first_hash_set):]).strip()

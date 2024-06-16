@@ -6,11 +6,10 @@ from tqdm import tqdm
 
 # vars
 url = "https://academy.hackthebox.com/modules/unlocked"
-directory = '/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/'
+directory = ''
 headers = {
             "Host": "academy.hackthebox.com",
-            "Cookie": "htb_academy_session=eyJpdiI6IlJCcGV4cTlkNUtkV09zWkd2c3ByRlE9PSIsInZhbHVlIjoiL1lKM2xKL0pmT3hxb3pIaFhibk9SVWFhL1l6aEVMQStJUVlLdGdma2c3NEJBNjh1U045TkFMaEdsL1IwdzJFYklFTW5VQlFYUmc3L3U2TnJZY1NVSWszRHlaUkQ2alhsQnJiTFRBUy9LSTZKMGYvSFY3V2luZFFhSjFaVUM1S2EiLCJtYWMiOiJjMDY4NWQ1MTRlYTNiMjVhNzc5ZGIzNjc1YWY4Njk5NzlmNDgyZGVkMWU5OWNmNTc3YjUyOGZlOTNkYTBhOWZiIiwidGFnIjoiIn0%3D"
-            }
+            "Cookie": ""}
 
 # methods
 def get_session(cookie):

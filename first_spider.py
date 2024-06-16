@@ -98,7 +98,7 @@ def write_to_files(module_names):
         # Iterate over module names
         for key, value_list in module_names.items():
             # Create a folder with the name of the key
-            folder_path = "/Users/marc.ponce/Documents/Obsidian Vault/Training/Hack the Box/" + key + "/"
+            folder_path = "/Users/Documents/Obsidian Vault/Training/Hack the Box/" + key + "/"
             if os.path.exists(folder_path):
                 # Skip if the folder already exists
                 outer_bar.update(1)

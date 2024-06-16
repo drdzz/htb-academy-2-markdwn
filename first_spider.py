@@ -9,7 +9,7 @@ url = "https://academy.hackthebox.com/modules/unlocked"
 directory = ''
 headers = {
             "Host": "academy.hackthebox.com",
-            "Cookie": ""}
+            "Cookie": "htb_academy_session="}
 
 # methods
 def get_session(cookie):
